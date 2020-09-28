@@ -40,14 +40,36 @@ class _MyFirstAppState extends State<MyFirstApp> {
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+                      Image(
+                        image: AssetImage('assets/images/flutter.png'),
+                        width: 100,
+                      ),
                       LinearProgressIndicator(value: _progressValue),
-                      Text('${(_progressValue * 100).round()}%',
-                          style: TextStyle(color: Colors.white, fontSize: 20)),
+                      Text(
+                        '${(_progressValue * 100).round()}%',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: 'Peddana',
+                        ),
+                      ),
                     ],
                   )
-                : Text(
-                    "Press button to download",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/icons/dart.png',
+                        width: 100,
+                      ),
+                      Text(
+                        "Press button to download",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontFamily: 'Peddana'),
+                      ),
+                    ],
                   ),
           ),
         ),
